@@ -1,0 +1,32 @@
+<header>
+  <div class="container flex justify-between items-center h-14">
+    <a href="/">
+      <span class="sr-only">Home</span>
+      <svg class="h-8 w-32" aria-hidden="true">
+        <use href="#svg:logo" class="w-auto"></use>
+      </svg>
+    </a>
+
+    <button
+      id="hamburger"
+      class="flex items-center justify-center w-12 h-12 -mr-2"
+    >
+      <span class="sr-only">Menu</span>
+      <svg class="h-9 w-9" aria-hidden="true">
+        <use href="#svg:hamburger" class="w-auto"></use>
+      </svg>
+    </button>
+
+    <nav id="mobile-nav" class="fixed">
+      <ul>
+        <!-- With Subnav -->
+        <li></li>
+        <li></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script>
+  import "./MobileHeader.js"
+</script>
