@@ -1,6 +1,6 @@
-<header>
+<header class="sticky top-0">
   <div class="container flex justify-between items-center h-14">
-    <a href="/">
+    <a href="/" class="relative z-10">
       <span class="sr-only">Home</span>
       <svg class="h-8 w-32" aria-hidden="true">
         <use href="#svg:logo" class="w-auto"></use>
@@ -9,19 +9,141 @@
 
     <button
       id="hamburger"
-      class="flex items-center justify-center w-12 h-12 -mr-2"
+      class="flex items-center justify-center w-12 h-12 -mr-2 peer group xl:hidden relative z-30"
+      aria-expanded="true"
+      aria-haspopup="menu"
+      aria-controls="mobile-nav"
     >
-      <span class="sr-only">Menu</span>
+      <span class="sr-only">Menü öffnen</span>
       <svg class="h-9 w-9" aria-hidden="true">
-        <use href="#svg:hamburger" class="w-auto"></use>
+        <use href="#svg:hamburger" class="w-auto group-aria-expanded:hidden"
+        ></use>
+        <use
+          href="#svg:x-orange"
+          class="w-auto hidden group-aria-expanded:block"></use>
       </svg>
     </button>
 
-    <nav id="mobile-nav" class="fixed">
-      <ul>
+    <nav
+      id="mobile-nav"
+      class="hidden mx-auto pt-20 max-xl:peer-aria-expanded:block max-xl:absolute max-xl:inset-0 max-xl:bg-white max-xl:xl:hidden"
+    >
+      <ul
+        class="text-body font-bold flex flex-col items-stretch mx-auto container"
+      >
         <!-- With Subnav -->
-        <li></li>
-        <li></li>
+        <li>
+          <button
+            aria-haspopup="menu"
+            aria-expanded="false"
+            class="h-12 flex justify-between gap-4 items-center w-full peer group"
+          >
+            Produkte
+
+            <svg class="w-4 h-4" aria-hidden="true">
+              <use href="#svg:chevron-right"></use>
+            </svg>
+          </button>
+
+          <ul
+            class="container fixed font-normal z-20 bg-white inset-0 translate-x-full duration-200 ease-in-out transition-transform peer-aria-expanded:translate-x-0"
+          >
+            <li>
+              <button
+                class="flex items-center justify-center pr-5 gap-5 h-14 font-bold"
+                aria-label="zurück"
+              >
+                <svg class="w-4 h-4" aria-hidden="true">
+                  <use href="#svg:chevron-left"></use>
+                </svg>
+
+                Produkte
+              </button>
+            </li>
+
+            <li class="pl-9 font-normal">
+              <button
+                aria-haspopup="menu"
+                aria-expanded="false"
+                class="h-12 flex justify-between gap-4 items-center w-full peer group"
+              >
+                Unsere Lösungen
+
+                <svg class="w-4 h-4" aria-hidden="true">
+                  <use href="#svg:chevron-right"></use>
+                </svg>
+              </button>
+
+              <ul
+                class="font-normal container fixed z-20 bg-white inset-0 translate-x-full duration-200 ease-in-out transition-transform peer-aria-expanded:translate-x-0"
+              >
+                <li>
+                  <button
+                    class="flex items-center justify-center pr-5 gap-5 h-14 font-bold"
+                    aria-label="zurück"
+                  >
+                    <svg class="w-4 h-4" aria-hidden="true">
+                      <use href="#svg:chevron-left"></use>
+                    </svg>
+
+                    Unsere Lösungen
+                  </button>
+                </li>
+
+                <li class="pl-9">
+                  <a href="#" class="h-12 flex items-center w-full">Lösung 1</a>
+                </li>
+
+                <li class="pl-9">
+                  <a href="#" class="h-12 flex items-center w-full">Lösung 2</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="pl-9">
+              <a href="#" class="h-12 flex items-center w-full">Produkt 1</a>
+            </li>
+            <li class="pl-9">
+              <a href="#" class="h-12 flex items-center w-full">Produkt 2</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <button
+            aria-haspopup="menu"
+            aria-expanded="false"
+            class="h-12 flex justify-between gap-4 items-center w-full"
+          >
+            Warum Polyas
+
+            <svg class="w-4 h-4" aria-hidden="true">
+              <use href="#svg:chevron-right"></use>
+            </svg>
+          </button>
+        </li>
+
+        <!-- Static links -->
+        <li class="pt-2 mt-2 border-t border-t-slate-light">
+          <a
+            href="/kontakt"
+            class="h-12 flex justify-between gap-4 items-center w-full font-normal"
+          >
+            Kontakt
+          </a>
+        </li>
+        <li>
+          <a
+            href="/logn"
+            class="h-12 flex justify-between gap-4 items-center w-full font-normal"
+          >
+            Login
+          </a>
+        </li>
+        <li class="flex justify-center mt-10">
+          <a href="/kostenlos-testen" class="button button-primary">
+            Kostenlos testen
+          </a>
+        </li>
       </ul>
     </nav>
   </div>
