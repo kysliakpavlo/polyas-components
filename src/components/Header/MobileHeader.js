@@ -13,6 +13,12 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   })
 
+  mobileNav.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      hamburger.setAttribute("aria-expanded", "false")
+    }
+  })
+
   mobileNav.querySelectorAll("[aria-haspopup='menu']").forEach((item) => {
     item.addEventListener("click", () => {
       const isToggled = item.getAttribute("aria-expanded") === "true"
@@ -20,7 +26,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
       // close button
       item.nextElementSibling
-        .querySelector("li:first-child > button")
+        ?.querySelector("li:first-child > button")
         .addEventListener("click", () => {
           item.setAttribute("aria-expanded", "false")
         })
