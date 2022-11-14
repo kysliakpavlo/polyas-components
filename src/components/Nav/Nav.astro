@@ -1,5 +1,5 @@
-<header class="sticky top-0">
-  <div class="container flex justify-between items-center h-14 xl:h-24">
+<header class="sticky top-0 z-50 bg-white">
+  <div class="container flex justify-between items-center min-h-14 xl:h-24">
     <a href="/" class="relative z-10">
       <span class="sr-only">Home</span>
       <svg class="h-8 w-32" aria-hidden="true">
@@ -27,7 +27,7 @@
     <!-- Mobile nav -->
     <nav
       id="mobile-nav"
-      class="hidden mx-auto pt-20 max-xl:peer-aria-expanded:block max-xl:absolute max-xl:inset-0 max-xl:bg-white"
+      class="hidden mx-auto pt-20 max-xl:peer-aria-expanded:block max-xl:absolute max-xl:inset-x-0 max-xl:top-0 max-xl:bg-white"
     >
       <ul
         class="text-body font-bold flex flex-col items-stretch mx-auto container"
@@ -153,19 +153,44 @@
     <nav class="hidden xl:block">
       <ul class="flex items-center text-body font-bold">
         <li>
-          <a href="/produkte" class="h-10 px-4 leading-10">Produkte</a>
+          <a
+            href="/produkte"
+            class="h-10 px-4 leading-10 transition-colors hover:text-accent inline-block"
+          >
+            Produkte
+          </a>
         </li>
         <li>
-          <a href="/produkte" class="h-10 px-4 leading-10">Warum POLYAS</a>
+          <a
+            href="/produkte"
+            class="h-10 px-4 leading-10 transition-colors hover:text-accent inline-block"
+          >
+            Warum POLYAS</a
+          >
         </li>
         <li>
-          <a href="/produkte" class="h-10 px-4 leading-10">Ressourcen</a>
+          <a
+            href="/produkte"
+            class="h-10 px-4 leading-10 transition-colors hover:text-accent inline-block"
+          >
+            Ressourcen
+          </a>
         </li>
         <li>
-          <a href="/produkte" class="h-10 px-4 leading-10">Über uns</a>
+          <a
+            href="/produkte"
+            class="h-10 px-4 leading-10 transition-colors hover:text-accent inline-block"
+          >
+            Über uns</a
+          >
         </li>
         <li>
-          <a href="/produkte" class="h-10 px-4 leading-10">Kontakt</a>
+          <a
+            href="/produkte"
+            class="h-10 px-4 leading-10 transition-colors hover:text-accent inline-block"
+          >
+            Kontakt
+          </a>
         </li>
         <li>
           <a href="/kostenlos-testen" class="button button-primary">
@@ -173,7 +198,12 @@
           </a>
         </li>
         <li>
-          <a href="/produkte" class="h-10 px-4 leading-10">Kontakt</a>
+          <a
+            href="/produkte"
+            class="h-10 px-4 leading-10 transition-colors hover:text-accent inline-block"
+          >
+            Kontakt
+          </a>
         </li>
       </ul>
     </nav>
@@ -181,5 +211,5 @@
 </header>
 
 <script>
-  import "./MobileHeader.js"
+  import "./MobileNav.js"
 </script>
