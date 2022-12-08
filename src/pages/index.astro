@@ -2,6 +2,18 @@
 import Icons from "../components/Icons/Icons.astro"
 import Nav from "../components/Nav/Nav.astro"
 import Hero from "../components/Hero/Hero.astro"
+import LogoSlides from "../components/Sections/LogoSlides.astro"
+import Cards from "../components/Sections/Cards.astro"
+import Content from "../components/Sections/Content.astro"
+import Iframe from "../components/Sections/Iframe.astro"
+import CtaBanner from "../components/Sections/CtaBanner.astro"
+import Insight from "../components/Sections/Insight.astro"
+import Slides from "../components/Sections/Slides.astro"
+import CtaSection from "../components/Sections/CtaSection.astro"
+import CtaSectionV2 from "../components/Sections/CtaSectionV2.astro"
+import CtaSectionV2copy from "../components/Sections/CtaSectionV2copy.astro"
+import Footer from "../components/Footer/Footer.astro"
+import HeroBanner from "../components/HeroBanner/HeroBanner.astro"
 ---
 
 <html lang="en">
@@ -13,11 +25,26 @@ import Hero from "../components/Hero/Hero.astro"
     <title>Astro</title>
   </head>
   <body class="text-dark">
+    <HeroBanner />
     <Nav />
     <main>
       <Hero />
+      <!--<LogoSlides />-->
+      <LogoSlides />
+      <Cards />
+      <Content />
+      <Iframe />
+      <CtaSectionV2 />
+      <CtaBanner />
+      <Insight />
+      <CtaSectionV2copy />
+      <CtaBanner />
+      <Cards />
+      <Slides />
+      <CtaSection />
     </main>
 
+    <Footer />
     <Icons />
   </body>
 </html>
